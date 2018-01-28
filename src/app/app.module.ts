@@ -6,11 +6,13 @@ import { DataTableModule } from 'primeng/components/datatable/datatable';
 import { TooltipModule } from 'primeng/components/tooltip/tooltip';
 
 import { AppComponent } from './app.component';
+import { PesquisaLancamentoComponent } from './pesquisa-lancamento/pesquisa-lancamento.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PesquisaLancamentoComponent
   ],
   imports: [
     BrowserModule,
