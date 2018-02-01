@@ -8,13 +8,15 @@ import { TooltipModule } from 'primeng/components/tooltip/tooltip';
 import { AppComponent } from './app.component';
 import { PesquisaLancamentoComponent } from './pesquisa-lancamento/pesquisa-lancamento.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PesquisaPessoaComponent } from './pesquisa-pessoa/pesquisa-pessoa.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PesquisaLancamentoComponent,
-    NavbarComponent
+    NavbarComponent,
+    PesquisaPessoaComponent
   ],
   imports: [
     BrowserModule,
