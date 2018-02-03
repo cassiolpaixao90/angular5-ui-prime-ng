@@ -22,6 +22,8 @@ import { PessoaCadastroComponent } from './pessoa-cadastro/pessoa-cadastro.compo
 
 import { CurrencyMaskModule } from 'ng2-currency-mask';
 import { MessageComponent } from './message/message.component';
+import { LancamentoGridComponent } from './lancamento-grid/lancamento-grid.component';
+import { PessoasGridComponent } from './pessoas-grid/pessoas-grid.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { MessageComponent } from './message/message.component';
     PesquisaPessoaComponent,
     LancamentoCadastroComponent,
     PessoaCadastroComponent,
-    MessageComponent
+    MessageComponent,
+    LancamentoGridComponent,
+    PessoasGridComponent
   ],
   imports: [
     BrowserModule,
