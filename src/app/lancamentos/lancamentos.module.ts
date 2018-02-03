@@ -16,6 +16,8 @@ import { PesquisaLancamentoComponent } from './pesquisa-lancamento/pesquisa-lanc
 import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-cadastro.component';
 import { LancamentoGridComponent } from './lancamento-grid/lancamento-grid.component';
 
+import { SharedModule } from '../shared/shared.module';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -29,7 +31,10 @@ import { LancamentoGridComponent } from './lancamento-grid/lancamento-grid.compo
     CalendarModule,
     SelectButtonModule,
     DropdownModule,
-    CurrencyMaskModule
+    CurrencyMaskModule,
+
+    SharedModule
+
   ],
   declarations: [
     PesquisaLancamentoComponent,

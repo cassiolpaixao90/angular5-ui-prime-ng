@@ -6,6 +6,7 @@ import { PesquisaPessoaComponent } from './pesquisa-pessoa/pesquisa-pessoa.compo
 import { PessoaCadastroComponent } from './pessoa-cadastro/pessoa-cadastro.component';
 import { PessoasGridComponent } from './pessoas-grid/pessoas-grid.component';
 
+
 import { InputTextModule } from 'primeng/components/inputtext/inputtext';
 import { ButtonModule } from 'primeng/components/button/button';
 import { DataTableModule } from 'primeng/components/datatable/datatable';
@@ -16,6 +17,7 @@ import { SelectButtonModule } from 'primeng/components/selectbutton/selectbutton
 import { DropdownModule } from 'primeng/components/dropdown/dropdown';
 import { InputMaskModule } from 'primeng/components/inputmask/inputmask';
 
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
@@ -27,6 +29,8 @@ import { InputMaskModule } from 'primeng/components/inputmask/inputmask';
     DataTableModule,
     TooltipModule,
     InputMaskModule,
+
+    SharedModule
   ],
   declarations: [
     PesquisaPessoaComponent,
