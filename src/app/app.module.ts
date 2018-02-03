@@ -16,7 +16,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PesquisaPessoaComponent } from './pesquisa-pessoa/pesquisa-pessoa.component';
 import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-cadastro.component';
 
-import { CurrencyMaskModule } from 'ng2-currency-mask'
+import { CurrencyMaskModule } from 'ng2-currency-mask';
+import { PessoaCadastroComponent } from './pessoa-cadastro/pessoa-cadastro.component'
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { CurrencyMaskModule } from 'ng2-currency-mask'
     PesquisaLancamentoComponent,
     NavbarComponent,
     PesquisaPessoaComponent,
-    LancamentoCadastroComponent
+    LancamentoCadastroComponent,
+    PessoaCadastroComponent
   ],
   imports: [
     BrowserModule,
