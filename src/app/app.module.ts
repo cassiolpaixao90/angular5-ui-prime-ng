@@ -4,11 +4,13 @@ import { InputTextModule } from 'primeng/components/inputtext/inputtext';
 import { ButtonModule } from 'primeng/components/button/button';
 import { DataTableModule } from 'primeng/components/datatable/datatable';
 import { TooltipModule } from 'primeng/components/tooltip/tooltip';
+import { InputTextareaModule } from 'primeng/components/inputtextarea/inputtextarea';
 
 import { AppComponent } from './app.component';
 import { PesquisaLancamentoComponent } from './pesquisa-lancamento/pesquisa-lancamento.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PesquisaPessoaComponent } from './pesquisa-pessoa/pesquisa-pessoa.component';
+import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-cadastro.component';
 
 
 @NgModule({
@@ -16,7 +18,8 @@ import { PesquisaPessoaComponent } from './pesquisa-pessoa/pesquisa-pessoa.compo
     AppComponent,
     PesquisaLancamentoComponent,
     NavbarComponent,
-    PesquisaPessoaComponent
+    PesquisaPessoaComponent,
+    LancamentoCadastroComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +27,7 @@ import { PesquisaPessoaComponent } from './pesquisa-pessoa/pesquisa-pessoa.compo
     ButtonModule,
     DataTableModule,
     TooltipModule,
+    InputTextareaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
