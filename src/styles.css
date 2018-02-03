@@ -36,3 +36,7 @@ a{
   width: 90px;
   text-align: center;
 }
+
+.ui-dropdown-filter-container{
+  width: 100%;
+}
