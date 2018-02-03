@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+import { PesquisaPessoaComponent } from './pesquisa-pessoa/pesquisa-pessoa.component';
+import { PessoaCadastroComponent } from './pessoa-cadastro/pessoa-cadastro.component';
+import { PessoasGridComponent } from './pessoas-grid/pessoas-grid.component';
+
 import { InputTextModule } from 'primeng/components/inputtext/inputtext';
 import { ButtonModule } from 'primeng/components/button/button';
 import { DataTableModule } from 'primeng/components/datatable/datatable';
@@ -10,11 +14,8 @@ import { CalendarModule } from 'primeng/components/calendar/calendar';
 import { InputTextareaModule } from 'primeng/components/inputtextarea/inputtextarea';
 import { SelectButtonModule } from 'primeng/components/selectbutton/selectbutton';
 import { DropdownModule } from 'primeng/components/dropdown/dropdown';
-import { CurrencyMaskModule } from 'ng2-currency-mask';
+import { InputMaskModule } from 'primeng/components/inputmask/inputmask';
 
-import { PesquisaLancamentoComponent } from './pesquisa-lancamento/pesquisa-lancamento.component';
-import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-cadastro.component';
-import { LancamentoGridComponent } from './lancamento-grid/lancamento-grid.component';
 
 @NgModule({
   imports: [
@@ -25,20 +26,16 @@ import { LancamentoGridComponent } from './lancamento-grid/lancamento-grid.compo
     ButtonModule,
     DataTableModule,
     TooltipModule,
-    InputTextareaModule,
-    CalendarModule,
-    SelectButtonModule,
-    DropdownModule,
-    CurrencyMaskModule
+    InputMaskModule,
   ],
   declarations: [
-    PesquisaLancamentoComponent,
-    LancamentoCadastroComponent,
-    LancamentoGridComponent
+    PesquisaPessoaComponent,
+    PessoaCadastroComponent,
+    PessoasGridComponent
   ],
-  exports: [
-    PesquisaLancamentoComponent,
-    LancamentoCadastroComponent
+  exports:[
+    PesquisaPessoaComponent,
+    PessoaCadastroComponent
   ]
 })
-export class LancamentosModule { }
+export class PessoasModule { }
