@@ -1,5 +1,5 @@
 <div class="container">
-  <form>
+  <form autocomplete="off"> 
     <div class="ui-g">
 
       <div class="ui-g-12">
@@ -18,30 +18,68 @@
 
       <div class="ui-g-6 ui-md-3 ui-fluid">
         <label>{{tipo.value === 'RECEITA'?'Recebimento':'Pagamento'}}</label>
-        <p-calendar dateFormat="dd/mm/yy" [inline]="false" [readonlyInput]="false" [showIcon]="true">
-        </p-calendar>
+        <p-calendar 
+            dateFormat="dd/mm/yy" 
+            [inline]="false" 
+            [readonlyInput]="false" 
+            [showIcon]="true"
+        ></p-calendar>
       </div>
 
       <div class="ui-g-12 ui-md-9 ui-fluid">
         <label>Descrição</label>
-        <input pInputText type="text">
+        <input 
+            pInputText 
+            type="text"
+            name="descricao"
+            ngModel=""
+            required
+            minlength="5"
+            #descricao="ngModel"    
+        >
+        <app-message
+          error="required"
+          text="Informe uma descrição"
+          [control]="descricao"
+        >
+        </app-message>
+        
+        <app-message
+            text="Mínimo de 5 caracteres"
+            [control]="descricao"
+            error="minlength"
+        >
+        </app-message>
       </div>
 
       <div class="ui-g-12 ui-md-3 ui-fluid">
         <label>Valor</label>
-        <input pInputText currencyMask
-        [options]="{prefix: '', thousands:'.', decimal:',', allowNegative: false}" 
-        type="text" placeholder="0,00">
+        <input 
+            pInputText 
+            currencyMask
+            [options]="{prefix: '', thousands:'.', decimal:',', allowNegative: false}" 
+            type="text" 
+            placeholder="0,00">
       </div>
 
       <div class="ui-g-12 ui-md-6 ui-fluid">
         <label>Categoria</label>
-        <p-dropdown #categoria placeholder="Selecione" [options]="categorias" [autoWidth]="false"></p-dropdown>
+        <p-dropdown 
+              [options]="categorias" 
+              [autoWidth]="false"
+              #categoria
+        ></p-dropdown>
       </div>
 
       <div class="ui-g-12 ui-md-6 ui-fluid">
         <label>Pessoa</label>
-        <p-dropdown #pessoa placeholder="Selecione" [filter]="true" [options]="pessoas" [autoWidth]="false"></p-dropdown>
+        <p-dropdown 
+            #pessoa
+            placeholder="Selecione" 
+            [filter]="true" 
+            [options]="pessoas"
+            [autoWidth]="false"
+        ></p-dropdown>
       </div>
 
       <div class="ui-g-12 ui-fluid">
