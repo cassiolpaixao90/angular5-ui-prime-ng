@@ -9,15 +9,16 @@ import { InputTextareaModule } from 'primeng/components/inputtextarea/inputtexta
 import { CalendarModule } from 'primeng/components/calendar/calendar';
 import { SelectButtonModule } from 'primeng/components/selectbutton/selectbutton';
 import { DropdownModule } from 'primeng/components/dropdown/dropdown';
+import { InputMaskModule } from 'primeng/components/inputmask/inputmask';
 
 import { AppComponent } from './app.component';
 import { PesquisaLancamentoComponent } from './pesquisa-lancamento/pesquisa-lancamento.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PesquisaPessoaComponent } from './pesquisa-pessoa/pesquisa-pessoa.component';
 import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-cadastro.component';
+import { PessoaCadastroComponent } from './pessoa-cadastro/pessoa-cadastro.component'
 
 import { CurrencyMaskModule } from 'ng2-currency-mask';
-import { PessoaCadastroComponent } from './pessoa-cadastro/pessoa-cadastro.component'
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { PessoaCadastroComponent } from './pessoa-cadastro/pessoa-cadastro.compo
     CalendarModule,
     SelectButtonModule,
     DropdownModule,
+    InputMaskModule,
     CurrencyMaskModule,
   ],
   providers: [],
