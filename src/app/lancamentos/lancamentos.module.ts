@@ -1,22 +1,22 @@
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 
-import { InputTextModule } from 'primeng/components/inputtext/inputtext';
-import { ButtonModule } from 'primeng/components/button/button';
-import { DataTableModule } from 'primeng/components/datatable/datatable';
-import { TooltipModule } from 'primeng/components/tooltip/tooltip';
+import { CurrencyMaskModule } from 'ng2-currency-mask';
+import { DropdownModule } from 'primeng/components/dropdown/dropdown';
+import { SelectButtonModule } from 'primeng/components/selectbutton/selectbutton';
 import { CalendarModule } from 'primeng/components/calendar/calendar';
 import { InputTextareaModule } from 'primeng/components/inputtextarea/inputtextarea';
-import { SelectButtonModule } from 'primeng/components/selectbutton/selectbutton';
-import { DropdownModule } from 'primeng/components/dropdown/dropdown';
-import { CurrencyMaskModule } from 'ng2-currency-mask';
+import { TooltipModule } from 'primeng/components/tooltip/tooltip';
+import { DataTableModule } from 'primeng/components/datatable/datatable';
+import { ButtonModule } from 'primeng/components/button/button';
+import { InputTextModule } from 'primeng/components/inputtext/inputtext';
 
-import { PesquisaLancamentoComponent } from './pesquisa-lancamento/pesquisa-lancamento.component';
+import { LancamentosRoutingModule } from './lancamentos-routing.module';
+import { SharedModule } from './../shared/shared.module';
+import { LancamentosPesquisaComponent } from './lancamentos-pesquisa/lancamentos-pesquisa.component';
 import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-cadastro.component';
-import { LancamentoGridComponent } from './lancamento-grid/lancamento-grid.component';
-
-import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
@@ -33,17 +33,13 @@ import { SharedModule } from '../shared/shared.module';
     DropdownModule,
     CurrencyMaskModule,
 
-    SharedModule
-
+    SharedModule,
+    LancamentosRoutingModule
   ],
   declarations: [
-    PesquisaLancamentoComponent,
     LancamentoCadastroComponent,
-    LancamentoGridComponent
+    LancamentosPesquisaComponent
   ],
-  exports: [
-    PesquisaLancamentoComponent,
-    LancamentoCadastroComponent
-  ]
+  exports: []
 })
 export class LancamentosModule { }

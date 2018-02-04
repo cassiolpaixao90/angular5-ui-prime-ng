@@ -1,23 +1,17 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 
-import { PesquisaPessoaComponent } from './pesquisa-pessoa/pesquisa-pessoa.component';
-import { PessoaCadastroComponent } from './pessoa-cadastro/pessoa-cadastro.component';
-import { PessoasGridComponent } from './pessoas-grid/pessoas-grid.component';
-
-
-import { InputTextModule } from 'primeng/components/inputtext/inputtext';
-import { ButtonModule } from 'primeng/components/button/button';
-import { DataTableModule } from 'primeng/components/datatable/datatable';
-import { TooltipModule } from 'primeng/components/tooltip/tooltip';
-import { CalendarModule } from 'primeng/components/calendar/calendar';
-import { InputTextareaModule } from 'primeng/components/inputtextarea/inputtextarea';
-import { SelectButtonModule } from 'primeng/components/selectbutton/selectbutton';
-import { DropdownModule } from 'primeng/components/dropdown/dropdown';
 import { InputMaskModule } from 'primeng/components/inputmask/inputmask';
+import { DataTableModule } from 'primeng/components/datatable/datatable';
+import { ButtonModule } from 'primeng/components/button/button';
+import { InputTextModule } from 'primeng/components/inputtext/inputtext';
+import { TooltipModule } from 'primeng/components/tooltip/tooltip';
 
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from './../shared/shared.module';
+import { PessoasPesquisaComponent } from './pessoas-pesquisa/pessoas-pesquisa.component';
+import { PessoaCadastroComponent } from './pessoa-cadastro/pessoa-cadastro.component';
+import { PessoasRoutingModule } from './pessoas-routing.module';
 
 @NgModule({
   imports: [
@@ -30,16 +24,13 @@ import { SharedModule } from '../shared/shared.module';
     TooltipModule,
     InputMaskModule,
 
-    SharedModule
+    SharedModule,
+    PessoasRoutingModule
   ],
   declarations: [
-    PesquisaPessoaComponent,
     PessoaCadastroComponent,
-    PessoasGridComponent
+    PessoasPesquisaComponent
   ],
-  exports:[
-    PesquisaPessoaComponent,
-    PessoaCadastroComponent
-  ]
+  exports: []
 })
 export class PessoasModule { }
