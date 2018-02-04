@@ -61,6 +61,7 @@
                 tooltipPosition="top"
                 [routerLink]="['/lancamentos', lanc.codigo]"></a>
               <a pButton icon="fa-trash"
+                [disabled="!auth.temPermissao('ROLE-REMOVER_LANCAMENTO')"
                 pTooltip="Excluir" tooltipPosition="top"
                 (click)="confirmarExclusao(lanc)"></a>
             </ng-template>
