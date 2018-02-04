@@ -60,9 +60,9 @@
               <a pButton icon="fa-pencil" pTooltip="Editar"
                 tooltipPosition="top"
                 [routerLink]="['/lancamentos', lanc.codigo]"></a>
-              <button pButton icon="fa-trash"
+              <a pButton icon="fa-trash"
                 pTooltip="Excluir" tooltipPosition="top"
-                (click)="confirmarExclusao(lanc)"></button>
+                (click)="confirmarExclusao(lanc)"></a>
             </ng-template>
         </p-column>
       </p-dataTable>
