@@ -12,7 +12,14 @@ import { LoginFormComponent } from './login-form/login-form.component';
 
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions){
-  return new AuthHttp(new AuthConfig(), http, options);
+
+  const config= new AuthConfig({
+    globalHeaders:[
+      {'Content-Type': 'application/json'}
+    ]
+  });
+
+  return new AuthHttp(config, http, options);
 }
 
 @NgModule({
