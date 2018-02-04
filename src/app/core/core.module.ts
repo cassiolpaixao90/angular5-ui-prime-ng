@@ -15,6 +15,8 @@ import { CategoriaService } from './../categorias/categoria.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada.component';
 
+import { JwtHelper } from 'angular2-jwt';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -37,6 +39,7 @@ import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada.component'
     AuthService,
 
     ConfirmationService,
+    JwtHelper,
     Title,
     { provide: LOCALE_ID, useValue: 'pt-BR' }
   ]
