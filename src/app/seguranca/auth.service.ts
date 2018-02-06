@@ -89,4 +89,9 @@ export class AuthService {
     return false;
   }
 
+  limparAccessToken(){
+    localStorage.removeItem("token");
+    this.jwtPayload = null;
+  }
+
 }

@@ -16,6 +16,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada.component';
 
 import { JwtHelper } from 'angular2-jwt';
+import { LogoutService } from '../seguranca/logout.service';
 
 @NgModule({
   imports: [
@@ -37,7 +38,7 @@ import { JwtHelper } from 'angular2-jwt';
     CategoriaService,
     ErrorHandlerService,
     AuthService,
-
+    LogoutService,
     ConfirmationService,
     JwtHelper,
     Title,
